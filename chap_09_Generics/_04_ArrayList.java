@@ -1,4 +1,4 @@
-package java_basic.chap_09_Generics.user;
+package java_basic.chap_09_Generics;
 
 import java.util.ArrayList;
 import java.util.Collections;
