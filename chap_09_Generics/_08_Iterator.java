@@ -1,8 +1,6 @@
 package java_basic.chap_09_Generics;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class _08_Iterator {
     public static void main(String[] args) {
@@ -50,6 +48,22 @@ public class _08_Iterator {
         printIterator(iterator);
 
         printDivider();
+
+        HashSet<String> set = new HashSet<>();
+        set.add("apple");
+        set.add("banana");
+
+        Iterator<String> itSet = set.iterator();
+        while(itSet.hasNext()) {
+            System.out.println("itSet: " + itSet.next());
+        }
+
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("apple", 10);
+        map.put("banana", 20);
+
+        // map.iterator() -> 적용되지 않음
+        Iterator<String> itMapKey = map.keySet().iterator();
     }
 
     public static void printDivider() {
